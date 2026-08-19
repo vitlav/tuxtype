@@ -1114,7 +1114,7 @@ int EraseObject(SDL_Surface* surf, int x, int y)
 /*-- file-scope variables and local file prototypes for SDL_ttf-based code: */
 #include <SDL3_ttf/SDL_ttf.h>
 /* We cache fonts here once loaded to improve performance: */
-TTF_Font* font_list[MAX_FONT_SIZE + 1] = {NULL};
+static TTF_Font* font_list[MAX_FONT_SIZE + 1] = {NULL};
 static void free_font_list(void);
 static TTF_Font* get_font(int size);
 static TTF_Font* load_font(const char* font_name, int font_size);
